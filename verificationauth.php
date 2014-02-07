@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
 <?php
 /**
  * Created by PhpStorm.
@@ -16,3 +22,7 @@ if (!empty($auth)) {
 } else {
     header('location:./errors/authfailed.html');
 }
+?>
+</form>
+</body>
+</html>
