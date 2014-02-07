@@ -5,4 +5,14 @@
  * Date: 07/02/14
  * Time: 08:36
  */
+session_start();
 include "./include/mysqlapi.inc.php";
+$auth =getauth($_POST['pseudo'],$_POST);
+if (!empty($auth)) {
+    $_SESSION['pseudo']= $_POST['pseudo'];
+    $_SESSION['userid']= $auth[0][0];
+    $_SESSION['argent']= $auth[0][7];
+    header('location:./index.php');
+} else {
+    header('location:./errors/authfailed.html');
+}

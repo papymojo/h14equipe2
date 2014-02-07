@@ -26,5 +26,5 @@ function requete($sql) {
 
 function getauth($pseudo,$mdp) {
     $resultat=requete('SELECT * FROM utilisateurs WHERE pseudo=\''.$pseudo.'\' AND password=\''.$mdp.'\';' );
-    return empty($resultat );
+    return $resultat ;
 }
