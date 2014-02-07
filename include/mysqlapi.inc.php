@@ -17,14 +17,24 @@ function requete($sql) {
     $resultat = array();
     $numligne = 0;
 
-    while ($ligne = mysql_fetch_array($result, MYSQL_ASSOC)) {
+    while ($ligne = mysql_fetch_array($result)) {
         $resultat[$numligne] = $ligne;
         $numligne++;
     }
     return $resultat ;
 }
 
+function getpseudo($pseudo) {
+    $resultat=requete('SELECT pseduo FROM utilisateurs WHERE pseudo=\''.$pseudo.'\';' );
+    return $resultat ;
+}
+
+function getemail($email) {
+    $resultat=requete('SELECT pseduo FROM utilisateurs WHERE email=\''.$email.'\';' );
+    return $resultat ;
+}
+
 function getauth($pseudo,$mdp) {
     $resultat=requete('SELECT * FROM utilisateurs WHERE pseudo=\''.$pseudo.'\' AND password=\''.$mdp.'\';' );
-    return empty($resultat );
+    return $resultat ;
 }
