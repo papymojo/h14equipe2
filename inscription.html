@@ -5,7 +5,7 @@
 </head>
 <body>
 <iframe src="iframepanel.php?titre=inscription" height="100" width="100%" name="panel" frameborder="0" ></iframe>
-<form action="./verificationauth.php" method="post" onsubmit="return validation()">
+<form action="./verificationinsc.php" method="post" onSubmit="return validation(this)">
     <label>Pseudonyme ........................:</label><input type="text" name="pseudo" maxlength="25"/>
     <label>Email .............................:</label><input type="text" name="email" maxlength="50"/>
     <label>Mot de passe ......................:</label><input type="password" name="password" maxlength="25"/>
@@ -20,8 +20,35 @@
 <script type="text/javascript">
     function validation(f) {
         var ck_email=/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        var ck_tel=/^(?:\+?\d{3}[ -]?\d{3}[ -]?\d{4}$/;
+        var ck_tel=/^(?:\+?\d{3}[ -]?\d{3}[ -]?\d{4})$/;
         var ck_post=/^(([a-zA-Z])\d([a-zA-Z])(.?)\d([a-zA-Z])\d)$/;
-    if ( )
+    if (!ck_email.test(f.email.value) ){
+       alert('Le format de l\'email est incorrect');
+       return false;
+    }
+    if (!ck_tel.test(f.telephone.value)) {
+        alert('Le format du numero de téléphone est incorrect');
+        return false;
+    }
+    if (!ck_post.test(f.codepostal.value)){
+        alert('Le format du codepostal est incorrect');
+        return false;
+    }
+    if (f.verifpassword.value!= f.password.value ) {
+        alert('Problème de mot de passe');
+        return false;
+    }
+    if (f.verifpassword.value.length <= 7 ){
+        alert('Le mot de passe doit contenir au moins 7 caractères');
+        return false;
+    }
+    if (f.pseudo.value.length <= 4 ){
+        alert('Le pseudonyme doit contenir au moins 4 caractères');
+        return false;
+    }
+    if (f.adresse.value.length <= 10){
+        alert('Il est conseiller d\'indiquer votre adresse afin de faciliter la livraison');
+    }
+        return true;
     }
 </script>
