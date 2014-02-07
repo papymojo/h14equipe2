@@ -6,6 +6,7 @@
  * Time: 08:22
  */
 
+
 function requete($sql) {
     mysql_connect('localhost', 'h14equipe2', 'h14equipe2')
     or die('Impossible de se connecter : ' . mysql_error());
@@ -30,11 +31,17 @@ function getpseudo($pseudo) {
 }
 
 function getemail($email) {
-    $resultat=requete('SELECT pseduo FROM utilisateurs WHERE email=\''.$email.'\';' );
+    $resultat=requete('SELECT pseudo FROM utilisateurs WHERE email=\''.$email.'\';' );
     return $resultat ;
 }
 
 function getauth($pseudo,$mdp) {
     $resultat=requete('SELECT * FROM utilisateurs WHERE pseudo=\''.$pseudo.'\' AND password=\''.$mdp.'\';' );
     return $resultat ;
+}
+
+function insutilisateur($pseudo,$password,$email,$adresse,$codepostal,$telephone) {
+    $resultat = requete("INSERT INTO utilisateurs pseudo,password,email,adresse,codepostall,telephone,portemonaie VALUES('"
+                                .$pseudo."','".$password."','".$email."','".$adresse."','".$codepostal."','".$telephone."')" );
+    return $resultat;
 }
