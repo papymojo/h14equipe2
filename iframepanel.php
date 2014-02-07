@@ -1,6 +1,7 @@
 <head>
     <base target="_parent" />
 </head>
+<body><div id="header">
 <?php
 /**
  * Created by PhpStorm.
@@ -18,3 +19,5 @@ if (isset($_SESSION['userid'])){
     echo '<a href=\'authentification.html\'><button>Se connecter</button></a>';
     echo '<a href=\'inscription.html\'><button>S\'inscrire</button></a>';
 }
+?>
+</body></div>

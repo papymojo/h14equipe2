@@ -13,7 +13,7 @@ session_destroy();
     <title></title>
 </head>
 <body>
-<iframe src="iframepanel.php?titre=deconnection" height="100" name="panel"></iframe>
+<iframe src="iframepanel.php?titre=deconnection" height="100" width="100%" name="panel" frameborder="0" ></iframe>
 <h1>Vous êtes désormé deconnecté</h1>
 <a href="./index.php"><button>Revenir à l'acceuil</button></a>
 </body>
