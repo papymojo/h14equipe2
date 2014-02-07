@@ -4,15 +4,23 @@
     <title></title>
 </head>
 <body>
-<form action="./verificationinsc.php" method="post">
-    <label>Email ....................:</label><input type="email" name="email">
-    <label>Pseudonyme ...............:</label><input type="text" name="pseudo">
-    <label>Mot de passe .............:</label><input type="password" name="password">
-    <label>Verifier le mot de passe .:</label><input type="password" name="passwordverif">
-    <label>Adresse ..................:</label><input type="text" name="adresse">
-    <label>Codepostal ...............:</label><input type="number" name="pseudo">
-    <label>telephone ................:</label><input type="number" name="pseudo">
+<form action="./verificationauth.php" method="post" onsubmit="return validation()">
+    <label>Pseudonyme ........................:</label><input type="text" name="pseudo" maxlength="25"/>
+    <label>Email .............................:</label><input type="text" name="email" maxlength="50"/>
+    <label>Mot de passe ......................:</label><input type="password" name="password" maxlength="25"/>
+    <label>Vérification du mot de passe ......:</label><input type="password" name="verifpassword" maxlength="25"/>
+    <label>Telephone .........................:</label><input type="text" name="telephone" maxlength="25"/>
+    <label>Adresse ...........................:</label><textarea name="adresse" rows="3" cols="50"></textarea>
+    <label>Codepostal ........................:</label><input type="text" name="codepostal" maxlength="10"/>
     <input type="submit" name="Valider"/><input type="reset" name="Effacer"/>
 </form>
 </body>
 </html>
+<script type="text/javascript">
+    function validation(f) {
+        var ck_email=/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        var ck_tel=/^(?:\+?\d{3}[ -]?\d{3}[ -]?\d{4}$/;
+        var ck_post=/^(([a-zA-Z])\d([a-zA-Z])(.?)\d([a-zA-Z])\d)$/;
+    if ( )
+    }
+</script>
