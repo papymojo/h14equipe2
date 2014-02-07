@@ -7,7 +7,7 @@
  */
 session_start();
 include "./include/mysqlapi.inc.php";
-$auth =getauth($_POST['pseudo'],$_POST);
+$auth =getauth($_POST['pseudo'],$_POST['password']);
 if (!empty($auth)) {
     $_SESSION['pseudo']= $_POST['pseudo'];
     $_SESSION['userid']= $auth[0][0];

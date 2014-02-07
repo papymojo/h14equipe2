@@ -17,7 +17,7 @@ function requete($sql) {
     $resultat = array();
     $numligne = 0;
 
-    while ($ligne = mysql_fetch_array($result, MYSQL_ASSOC)) {
+    while ($ligne = mysql_fetch_array($result)) {
         $resultat[$numligne] = $ligne;
         $numligne++;
     }
