@@ -26,7 +26,7 @@ function requete($sql) {
 }
 
 function getpseudo($pseudo) {
-    $resultat=requete('SELECT pseduo FROM utilisateurs WHERE pseudo=\''.$pseudo.'\';' );
+    $resultat=requete('SELECT pseudo FROM utilisateurs WHERE pseudo=\''.$pseudo.'\';' );
     return $resultat ;
 }
 
