@@ -24,6 +24,16 @@ function requete($sql) {
     return $resultat ;
 }
 
+function getpseudo($pseudo) {
+    $resultat=requete('SELECT pseduo FROM utilisateurs WHERE pseudo=\''.$pseudo.'\';' );
+    return $resultat ;
+}
+
+function getemail($email) {
+    $resultat=requete('SELECT pseduo FROM utilisateurs WHERE email=\''.$email.'\';' );
+    return $resultat ;
+}
+
 function getauth($pseudo,$mdp) {
     $resultat=requete('SELECT * FROM utilisateurs WHERE pseudo=\''.$pseudo.'\' AND password=\''.$mdp.'\';' );
     return $resultat ;
