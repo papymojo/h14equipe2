@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
 <iframe src="iframepanel.php?titre=inscription" height="100" width="100%" name="panel" frameborder="0" ></iframe>
 <?php
 /**
@@ -27,6 +33,8 @@ if (!empty($dispo)) {
     echo '<a href=\'index.php\'><button>Retour</button></a>';
 }
 ?>
+</body>
+</html>
 <script type="text/javascript">
     function validation(f) {
         if (f.verifpassword.value!= f.password.value ) {

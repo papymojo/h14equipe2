@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
 <?php
 /**
  * Created by PhpStorm.
@@ -41,7 +47,7 @@ function getauth($pseudo,$mdp) {
 }
 
 function insutilisateur($pseudo,$password,$email,$adresse,$codepostal,$telephone) {
-    $resultat = requete("INSERT INTO utilisateurs pseudo,password,email,adresse,codepostall,telephone,portemonaie VALUES('"
-                                .$pseudo."','".$password."','".$email."','".$adresse."','".$codepostal."','".$telephone."')" );
+    $resultat = requete("INSERT INTO utilisateurs (pseudo,password,email,adresse,codepostal,telephone,portemonaie) VALUES('"
+                                .$pseudo."','".$password."','".$email."','".$adresse."','".$codepostal."','".$telephone."','.0)" );
     return $resultat;
 }
