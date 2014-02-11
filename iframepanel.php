@@ -8,23 +8,29 @@
 
 </head>
 </head>
-<body> <div class="panel-heading">
-<?php
-/**
- * Created by PhpStorm.
- * User: benjaminbercy
- * Date: 07/02/14
- * Time: 13:15
- */
-session_start();
-echo '<h1>'.$_GET['titre'].'</h1>';
+<body>
+    <div class="navbar">
+        <div class="navbar-inner">
 
+<?php
+session_start();
+$Titre = $_GET['titre'];
+$Session = $_SESSION['pseudo'];
+
+echo "<a class='brand' href='#'>$Titre</a>";
+echo"<ul class='nav'>";
 if (isset($_SESSION['userid'])){
-    echo '<h2>'.$_SESSION['pseudo'].'</h2>';
-    echo '<a href=\'deconnexion.php\'" target="_parent"><button>Se déconnecter</button></a>';
+        echo "<a class='brand' href='#'>$Session</a>";
+        echo "<li><a href=deconnexion.php><button class='btn btn-danger text-center'>Se déconnecter</button></a></li>";
 } else {
-    echo '<a href=\'authentification.html\'><button>Se connecter</button></a>';
-    echo '<a href=\'inscription.html\'><button>S\'inscrire</button></a>';
+    echo "<li><a href=authentification.html><button class='btn btn-success text-center'>Se connecter</button></a></li>";
+    echo "<li><a href=inscription.html><button class='btn btn-info text-center'>Inscription</button></a></li>";
 }
 ?>
-</div></body>
+    </div>
+        </div>
+</body>
+
+
+
+
