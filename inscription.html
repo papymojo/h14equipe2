@@ -1,22 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
-    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Site d'enchères - Page de connexion </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Projet.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-2.0.3.min.js"></script>
 </head>
 <body>
-<iframe src="iframepanel.php?titre=inscription" height="100" width="100%" name="panel" frameborder="0" ></iframe>
-<form action="./verificationinsc.php" method="post" onSubmit="return validation(this)">
-    <label>Pseudonyme ........................:</label><input type="text" name="pseudo" maxlength="25"/>
-    <label>Email .............................:</label><input type="email" name="email" maxlength="50"/>
-    <label>Mot de passe ......................:</label><input type="password" name="password" maxlength="25"/>
-    <label>Vérification du mot de passe ......:</label><input type="password" name="verifpassword" maxlength="25"/>
-    <label>Telephone .........................:</label><input type="text" name="telephone" maxlength="25"/>
-    <label>Adresse ...........................:</label><textarea name="adresse" rows="3" cols="50"></textarea>
-    <label>Codepostal ........................:</label><input type="text" name="codepostal" maxlength="10"/>
-    <input type="submit" name="Valider"/><input type="reset" name="Effacer"/>
+<iframe src="iframepanel.php?titre=Inscription" height="100" width="100%" name="panel" frameborder="0" ></iframe>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">&nbsp;</div>
+                <div class="row"></div>
+<form action="./verificationinsc.php" style="text-align: center" method="post" onSubmit="return validation(this)">
+    <div class="form-group">
+        <div class="col-md-2 col-md-offset-2 text-center"></div>
+        <div class="col-md-6 text-center"><input class="form-control" type="text" id="pseudo" name="pseudo" required="required" placeholder="Pseudonyme" maxlength="25"/></div>
+        <div class="col-md-2"></div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-2 col-md-offset-2 text-center"></div>
+        <div class="col-md-6 text-center"><input class="form-control" type="text" id="email" name="email" required="required" placeholder="Courriel" maxlength="50"/></div>
+        <div class="col-md-2"></div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-2 col-md-offset-2 text-center"></div>
+        <div class="col-md-6 text-center"><input class="form-control" type="password" id="password" name="password" required="required" placeholder="Mot de passe" maxlength="25"/></div>
+        <div class="col-md-2"></div>
+
+    <div class="form-group">
+        <div class="col-md-2 col-md-offset-2 text-center"></div>
+        <div class="col-md-6 text-center"><input class="form-control" type="password" id="verifpassword" name="verifpassword" required="required" placeholder="Confirmation du mot de passe" maxlength="25"/></div>
+        <div class="col-md-2"></div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-2 col-md-offset-2 text-center"></div>
+        <div class="col-md-6 text-center"><input class="form-control" type="text" id="telephone" name="telephone" required="required" placeholder="Numéro de téléphone" maxlength="25"/></div>
+        <div class="col-md-2"></div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-2 col-md-offset-2 text-center"></div>
+        <div class="col-md-6 text-center"><textarea class="form-control" type="text" id="adresse" name="adresse" maxlengt="" row="2" cols="30.5" required="required" placeholder="Adresse" maxlength="500"/></textarea></div>
+        <div class="col-md-2"></div>div
+    </div>
+    <div class="form-group">
+        <div class="col-md-2 col-md-offset-2 text-center"></div>
+        <div class="col-md-6 text-center"><input class="form-control" type="text" id="codepostal" name="codepostal" required="required" placeholder="code postal" maxlength="25"/></div>
+        <div class="col-md-2"></div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-4 col-md-8 text-center">
+            <button type="submit" name="Valider" class="btn btn-success  text-center">S'inscrire</button>
+            <button type="reset" name="Effacer" class="btn btn-danger  text-center">Effacer</button>
+
+        </div>
+     </div>
+</div>
 </form>
+            </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+
+
+
 <script type="text/javascript">
     function validation(f) {
         var ck_email=/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

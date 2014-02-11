@@ -18,7 +18,7 @@ if (!empty($auth)) {
     $_SESSION['pseudo']= $_POST['pseudo'];
     $_SESSION['userid']= $auth[0][0];
     $_SESSION['argent']= $auth[0][7];
-    header('location:./index.php');
+    header('location:./index.php');errors/authfailed.html;
 } else {
     header('location:./errors/authfailed.html');
 }
