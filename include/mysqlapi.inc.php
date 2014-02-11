@@ -52,3 +52,8 @@ function insutilisateur($pseudo,$password,$email,$adresse,$codepostal,$telephone
     return $resultat;
 }
 
+function insproduit($nom,$prix,$duree,$description,$etat) {
+    $resultat = requete("INSERT INTO produit (nom,prixdedepart,date,duree,vendu,description,etat) VALUES('"
+        .$nom."',".$prix.",SYSDATE(),".$duree.",0,'".$description."','".$etat."')" );
+    return $resultat;
+}

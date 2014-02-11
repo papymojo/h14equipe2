@@ -17,13 +17,13 @@
 </html>
 <script type="text/javascript">
 function validation(f) {
-var ck_number=/^\$?\d+((,\d{3})+)?(\.\d+)?$/;
+var ck_number=/^\$?\d+(\.\d+)?$/;
 var ck_jour=/^\$?\d+?$/;
 if (!ck_number.test(f.prix.value) ){
 alert('Le prix est incorrect');
 return false;
 }
-if (!ck_jour.test(f.prix.value) ){
+if (!ck_jour.test(f.duree.value) ){
 alert('Veuillez entrer un nombre entier de jour pour la durée de l\'offre');
 return false;
 }
