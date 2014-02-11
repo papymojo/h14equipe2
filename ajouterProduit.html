@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<iframe src="iframepanel.php?titre=Nouveau Produit" height="100" width="100%" name="panel" frameborder="0" ></iframe>
+<form action="./verificationproduit.php" method="post" onSubmit="return validation(this)">
+    <label>Nom ...............................:</label><input type="text" name="nom" maxlength="25"/>
+    <label>Prix de Départ ....................:</label><input type="text" name="prix" maxlength="10"/>
+    <label>Durée de l'offre...................:</label><input type="text" name="duree" maxlength="10"/>
+    <label>Description .......................:</label><textarea name="description" rows="10" cols="25"></textarea>
+    <label>Etat ..............................:</label><textarea name="etat" rows="10" cols="25"></textarea>
+    <input type="submit" name="Valider"/><input type="reset" name="Effacer"/>
+</form>
+</body>
+</html>
+<script type="text/javascript">
+function validation(f) {
+var ck_number=/^\$?\d+(\.\d+)?$/;
+var ck_jour=/^\$?\d+?$/;
+if (!ck_number.test(f.prix.value) ){
+alert('Le prix est incorrect');
+return false;
+}
+if (!ck_jour.test(f.duree.value) ){
+alert('Veuillez entrer un nombre entier de jour pour la durée de l\'offre');
+return false;
+}
+if (f.description.value.length <= 10 ){
+alert('La description doit être complete');
+return false;
+}
+if (f.etat.value.length <= 10){
+alert('Vous devez indiquer l\'état de l\'objet');
+return false;
+}
+return true;
+}
+</script>
