@@ -20,4 +20,4 @@ if (isset($_SESSION['userid'])){
     echo '<a href=\'inscription.html\'><button>S\'inscrire</button></a>';
 }
 ?>
-</body></div>
+</div></body>
