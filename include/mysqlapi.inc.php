@@ -52,8 +52,9 @@ function insutilisateur($pseudo,$password,$email,$adresse,$codepostal,$telephone
     return $resultat;
 }
 
-function insproduit($nom,$prix,$duree,$description,$etat) {
-    $resultat = requete("INSERT INTO produit (nom,prixdedepart,date,duree,vendu,description,etat) VALUES('"
-        .$nom."',".$prix.",SYSDATE(),".$duree.",0,'".$description."','".$etat."')" );
-    return $resultat;
+function insproduit($nom,$prix,$duree,$description,$image,$etat) {
+    requete("INSERT INTO produit (nom,prixdedepart,date,duree,vendu,description,image,etat) VALUES('"
+        .$nom."',".$prix.",SYSDATE(),".$duree.",0,'".$description."'".$image."'".$etat."')" );
+    $resultat = requete("SELECT id FROM produit WHERE nom = '".$nom."'AND date = '".$duree."'"."'AND description = '".$description."'");
+    return $resultat[0][0];
 }

@@ -10,6 +10,7 @@ session_destroy();
     <link rel="stylesheet" href="css/Projet.css">
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-2.0.3.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
 <iframe src="iframepanel.php?titre=Déconnection" height="100" width="100%" name="panel" frameborder="0" ></iframe>
