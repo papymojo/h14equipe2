@@ -58,3 +58,9 @@ function insproduit($nom,$prix,$duree,$description,$image,$etat) {
     $resultat = requete("SELECT id FROM produit WHERE nom = '".$nom."'AND date = '".$duree."'"."'AND description = '".$description."'");
     return $resultat[0][0];
 }
+
+function aprovisionner($pseudo,$montant) {
+    requete("UPDATE utilisateurs SET portemonaie = portemonaie + ".$montant." WHERE pseudo ='".$pseudo."' ;" );
+    $resultat = requete("SELECT portemonaie FROM utilisateurs WHERE pseudo = '".$pseudo."'");
+    return $resultat[0][0];
+}
