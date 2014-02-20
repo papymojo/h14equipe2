@@ -23,7 +23,8 @@ if (isset($_SESSION['userid'])){
         echo "<a class='brand' href='#'>$Session</a>";
         echo "<li><a href=deconnexion.php><button class='btn btn-danger text-center'>Se déconnecter</button></a></li>";
 } else {
-    echo "<li><a href=authentification.html><button class='btn btn-success text-center'>Se connecter</button></a></li>";
+
+    echo "<li><a href=authentification.html><button class='btn btn-success '>Se connecter</button></a></li>";
     echo "<li><a href=inscription.html><button class='btn btn-info text-center'>Inscription</button></a></li>";
 }
 ?>
