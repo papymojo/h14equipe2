@@ -16,7 +16,7 @@ session_destroy();
 <iframe src="iframepanel.php?titre=Déconnection" height="100" width="100%" name="panel" frameborder="0" ></iframe>
     <div class="hero-unit">
         <h1>Vous êtes désormais déconnecté</h1>
-        <a href="./index.php"><button class="btn btn-warning text-center">Revenir à l'acceuil</button></a>
+        <a href="./index.php"><button class="btn btn-warning text-center">Revenir à l'accueil</button></a>
     </div>
 </body>
 </html>
