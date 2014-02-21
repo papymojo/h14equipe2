@@ -54,8 +54,8 @@ function insutilisateur($pseudo,$password,$email,$adresse,$codepostal,$telephone
 
 function insproduit($nom,$prix,$duree,$description,$image,$etat) {
     requete("INSERT INTO produit (nom,prixdedepart,date,duree,vendu,description,image,etat) VALUES('"
-        .$nom."',".$prix.",SYSDATE(),".$duree.",0,'".$description."'".$image."'".$etat."')" );
-    $resultat = requete("SELECT id FROM produit WHERE nom = '".$nom."'AND date = '".$duree."'"."'AND description = '".$description."'");
+        .$nom."',".$prix.",SYSDATE(),".$duree.",0,'".$description."','".$image."','".$etat."')" );
+    $resultat = requete("SELECT id FROM produit WHERE nom = '".$nom."' AND date = '".$duree."'AND description = '".$description."'");
     return $resultat[0][0];
 }
 
@@ -63,4 +63,15 @@ function aprovisionner($pseudo,$montant) {
     requete("UPDATE utilisateurs SET portemonaie = portemonaie + ".$montant." WHERE pseudo ='".$pseudo."' ;" );
     $resultat = requete("SELECT portemonaie FROM utilisateurs WHERE pseudo = '".$pseudo."'");
     return $resultat[0][0];
+}
+
+function moteurDeRecherche($motclee) {
+    $req= "SELECT * FROM produit WHERE 0=1 ";
+    $mots = explode(' ',$motclee);
+    foreach($mots as $mot)
+    {
+        $req .= "OR description LIKE '%".$mot."%' OR nom LIKE '%".$mot."%'";
+    }
+    $req .= " ORDER BY date DESC ";
+    return requete($req);
 }

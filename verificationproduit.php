@@ -14,13 +14,13 @@
  */
 include "./include/mysqlapi.inc.php";
 $dossier = 'images/produit/';
-$fichier = $_POST['nom'].'.jpg';
-insproduit($_POST['nom'],$_POST['prix'],$_POST['duree'],$_POST['description'],$dossier.$_POST['nom'].'.jpg',$_POST['etat']);
+$id = insproduit($_POST['nom'],$_POST['prix'],$_POST['duree'],mysql_real_escape_string($_POST['description']),mysql_real_escape_string($dossier.$_POST['nom'].'.jpg'),mysql_real_escape_string($_POST['etat']));
 if(isset($_FILES['image']))
 {
-    $extensions = array('.png', '.gif', '.jpg', '.jpeg');
+    $extensions = array('.jpeg','.jpg');
+    echo $_FILES['image']['tmp_name'];
     if (in_array(strrchr($_FILES['image']['name'], '.'), $extensions)) {
-    move_uploaded_file($_FILES['image']['tmp_name'], $dossier . $fichier);
+    move_uploaded_file($_FILES['image']['tmp_name'], $dossier . $_POST['nom'].'.jpg');
     } else {
         echo '<h2>Fichier image incorrect , aucune image ne seras utilisé.</h2>' ;
     }
@@ -28,6 +28,6 @@ if(isset($_FILES['image']))
 
 ?>
 <h2>Le Produit à été mis en vente</h2>
-<a href=\'index.php\'><button>Retour</button></a>
+<a href='index.php'><button>Retour</button></a>
 </body>
 </html>

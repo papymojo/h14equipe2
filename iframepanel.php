@@ -34,6 +34,12 @@
                 <input type="submit" name="Cherche" class="btn btn-success  text-center">
             </form>
         </li>
+        <?php
+        session_start();
+        if (isset($_SESSION['userid'])) {
+        echo "<li><a href=ajouterProduit.html><button class='btn btn-info text-center'>Vendre Un Produit</button></a></li>";
+        }
+        ?>
         </ul>
     </div>
 </div>
