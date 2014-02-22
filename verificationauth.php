@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <?php include('./include/Dependances.html'); ?>
 </head>
 <body>
 <?php
