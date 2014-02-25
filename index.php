@@ -28,10 +28,9 @@ echo '<iframe src="iframepanel.php?titre=Accueil" height="100" width="100%" name
                 <div class="carousel-inner">
 
 
-                    <div class="item active text-center"><img src = "./img/canard.png"></div>
-                    <div class="item text-center"><img src = "./img/cheval.png"></div>
-                    <div class="item text-center"><img src = "./img/chevre.png"></div>
-                    <div class="item text-center"><img src = "./img/cochon.png"></div>
+                    <div class="item active text-center"><center><img class="img-rounded" src = "./images/enterprise.jpg" height="600" width="800"></center><h2>USS Enterprise</h2></div>
+                    <div class="item text-center"><center><img class="img-rounded" src = "./images/cheval.jpg" height="600" width="800"></center><h2>cheval</h2></div>
+                    <div class="item text-center"><center><img class="img-rounded" src = "./images/cochon.jpg" height="600" width="800"></center><h2>dédé</h2></div>
 
 
 

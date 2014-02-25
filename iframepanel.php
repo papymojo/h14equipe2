@@ -1,10 +1,6 @@
 <head>
     <base target="_parent" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/Projet.css">
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-2.0.3.min.js"></script>
+    <?php include('./include/Dependances.html'); ?>
 
 </head>
 </head>

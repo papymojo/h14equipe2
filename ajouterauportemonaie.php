@@ -1,11 +1,7 @@
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Site d'enchères - Approvisionner </title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/Projet.css">
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-2.0.3.min.js"></script>
+    <?php include('./include/Dependances.html'); ?>
 </head>
 <body>
 <iframe src="iframepanel.php?titre=Approvisioner" height="100" width="100%" name="panel" frameborder="0" ></iframe>
