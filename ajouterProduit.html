@@ -13,7 +13,7 @@
 <head>
     <script type="text/javascript" src="./ckeditor/ckeditor.js"></script>
 </head>
-<form action="./verificationproduit.php" method="post" onSubmit="return validation(this)">
+<form action="./verificationproduit.php" method="post" onSubmit="return validation(this)" enctype="multipart/form-data">
     <label>Nom ...............................:</label><input type="text" name="nom" maxlength="25"/>
     <label>Prix de Départ ....................:</label><input type="text" name="prix" maxlength="10"/>
     <label>Durée de l'offre...................:</label><input type="text" name="duree" maxlength="10"/>
