@@ -19,6 +19,7 @@ if(isset($_FILES['image']))
 {
     $extensions = array('.jpeg','.jpg');
     if (in_array(strrchr($_FILES['image']['name'], '.'), $extensions)) {
+    mkdir($dossier);
     move_uploaded_file($_FILES['image']['tmp_name'], $dossier . $_POST['nom'].'.jpg');
     } else {
         echo '<h2>Fichier image incorrect , aucune image ne seras utilisé.</h2>' ;
