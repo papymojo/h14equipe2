@@ -60,7 +60,7 @@ if (!empty($dispo)) {
 } else {
     echo '<h2>Votre inscription est effective</h2>';
     insutilisateur($_POST['pseudo'],$_POST['password'],$_POST['email'],$_POST['adresse'],$_POST['codepostal'],$_POST['telephone']);
-    echo "<a href=\'authentification.html\'><button class='btn btn-success'>Se connecter</button></a>";
+    echo "<a href=\'authentification.php\'><button class='btn btn-success'>Se connecter</button></a>";
     echo "<a href=\'index.php\'><button class='btn btn-warning'>Retour</button></a>";
 
 }

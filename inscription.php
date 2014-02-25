@@ -2,11 +2,7 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Site d'enchères - Page de connexion </title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/Projet.css">
-    <script src="js/jquery-2.0.3.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <?php include("./include/Dependances.html") ?>
 </head>
 <body>
 <iframe src="iframepanel.php?titre=Inscription" height="100" width="100%" name="panel" frameborder="0" ></iframe>

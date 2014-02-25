@@ -25,8 +25,8 @@
             echo "<li><a href=ajouterauportemonaie.php><button class='btn btn-warning text-center'>Aprovisionner</button></a></li>";
             echo "<li><a href=deconnexion.php><button class='btn btn-danger text-center'>Se déconnecter</button></a></li>";
         } else {
-            echo "<li><a href=authentification.html><button class='btn btn-success '>Se connecter</button></a></li>";
-            echo "<li><a href=inscription.html><button class='btn btn-info text-center'>Inscription</button></a></li>";
+            echo "<li><a href=authentification.php><button class='btn btn-success '>Se connecter</button></a></li>";
+            echo "<li><a href=inscription.php><button class='btn btn-info text-center'>Inscription</button></a></li>";
         } ?>
         <li>
             <form class="form-inline" role="form" action="resultat.php" method="POST">
@@ -37,7 +37,7 @@
         <?php
         session_start();
         if (isset($_SESSION['userid'])) {
-        echo "<li><a href=ajouterProduit.html><button class='btn btn-info text-center'>Vendre Un Produit</button></a></li>";
+        echo "<li><a href=ajouterProduit.php><button class='btn btn-info text-center'>Vendre Un Produit</button></a></li>";
         }
         ?>
         </ul>
