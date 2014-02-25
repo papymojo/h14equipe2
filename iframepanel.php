@@ -17,7 +17,7 @@
         echo "<ul class='nav'>";
         if (isset($_SESSION['userid'])) {
             echo "<a class='brand' href='#'>$Session</a>";
-            echo "<li><a class='brand' href='#'>" . $_SESSION['argent'] . "$</a></li>";
+            echo "<li><a class='brand' href='#'>" . number_format($_SESSION['argent'],2,',',' '). "$</a></li>";
             echo "<li><a href=ajouterauportemonaie.php><button class='btn btn-warning text-center'>Aprovisionner</button></a></li>";
             echo "<li><a href=deconnexion.php><button class='btn btn-danger text-center'>Se déconnecter</button></a></li>";
         } else {

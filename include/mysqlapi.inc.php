@@ -74,4 +74,6 @@ function moteurDeRecherche($motclee) {
     }
     $req .= " ORDER BY date DESC ";
     return requete($req);
+
+
 }
