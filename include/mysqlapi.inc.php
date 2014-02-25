@@ -75,5 +75,8 @@ function moteurDeRecherche($motclee) {
     $req .= " ORDER BY date DESC ";
     return requete($req);
 
-
+function carousel() {
+    $resultat = requete( "SELECT TOP 5 * FROM produit ORDER BY date");
+    echo "<div class=\"item active text-center\"><center><img class=\"img-rounded\" src = ".$resultat[0][7]." height=\"600\" width=\"800\"></center><h2>".$resultat[0][1]."</h2></div>";
+}
 }

@@ -15,7 +15,7 @@
     <label>Durée de l'offre...................:</label><input type="text" name="duree" maxlength="10"/>
     <label>Description .......................:</label><textarea class="ckeditor" name="description"  rows="10" cols="25"></textarea>
     <label>Etat ..............................:</label><textarea class="ckeditor" name="etat" rows="10" cols="25"></textarea>
-    <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
+    <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
     <label>Image .............................:</label><input type="file" name="image" />
     <input type="submit" name="Valider"/><input type="reset" name="Effacer"/>
 </form>
