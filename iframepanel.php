@@ -1,5 +1,5 @@
 <head>
-    <base target="_parent"/>
+    <base target="_parent" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Projet.css">

@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+    <title>Site d'enchères - Page de connexion </title>
+    <?php include('./include/Dependances.html'); ?>
+</head>
     <title></title>
 </head>
 <body>
@@ -17,21 +20,49 @@ include "./include/mysqlapi.inc.php";
 $dispo = getpseudo($_POST['pseudo']);
 if (!empty($dispo)) {
     echo '<script type="text/javascript">alert("Le pseudonyme '.$_POST['pseudo'].' est déjà utilisé !")</script>';
-    echo '<form action="./verificationinsc.php" method="post" onSubmit="return validation(this)">';
-    echo '<label>Pseudonyme ........................:</label><input type="text" name="pseudo" maxlength="25"/>';
-    echo '<input type="hidden" name="email" maxlength="50" value="'.$_POST['email'].'"/>';
-    echo '<label>Mot de passe ......................:</label><input type="password" name="password" maxlength="25"/>';
-    echo '<label>Vérification du mot de passe ......:</label><input type="password" name="verifpassword" maxlength="25"/>';
+    echo "<div class='row'>";
+        echo "<div class='col-md-8 col-md-offset-2'>";
+            echo "<div class='panel panel-default'>";
+                 echo "<div class='panel-body'>";
+                    echo "<div class='row'></div>";
+                        echo '<form action="./verificationinsc.php" method="post" onSubmit="return validation(this)">';
+                            echo "<div class='form-group'>";
+                               echo "<div class='col-lg-10 text-center'><input class='form-control' type='text' id='pseudo' name='pseudo' maxlength='25' required='required' placeholder='Entrer votre pseudonyme ici'/></div>";
+                                echo "<div class='col-md-2'></div>";
+                            echo "</div>";
+                                 echo '<input type="hidden" name="email" maxlength="50" value="'.$_POST['email'].'"/>';
+
+                                echo "<div class='form-group'>";
+                                echo "<div class='col-lg-10 text-center'><input class='form-control' type='password' id='password' name='password' maxlength='25' required='required' placeholder='Entrer votre mot de passe ici'/></div>";
+                                echo "<div class='col-md-2'></div>";
+                                echo "</div>";
+
+                                echo "<div class='form-group'>";
+                                echo "<div class='col-md-10 text-center'><input class='form-control' type='password' id='verifpassword' name='verifpassword' maxlength='25' required='required' placeholder='Confirmer le mot de passe'/></div>";
+                                echo "<div class='col-md-2'></div>";
+                                echo "</div>";
+
+                 echo "</div>";
+            echo "</div>";
+         echo "</div>";
+    echo "</div>";
+
     echo '<input type="hidden" name="telephone" maxlength="25" value="'.$_POST['telephone'].'"/>';
     echo '<input type="hidden" name="adresse" rows="3" cols="50" value="'.$_POST['adresse'].'"/>';
     echo '<input type="hidden" name="codepostal" maxlength="10" value="'.$_POST['codepostal'].'"/>';
-    echo '<input type="submit" name="Valider"/><input type="reset" name="Effacer"/>';
+    echo "<div class='form-group'>";
+        echo "<div class='col-md-offset-4 col-md-8 text-center'>";
+            echo"<button type='submit' name='Valider' class='btn btn-success  text-center'>Envoyer</button>";
+            echo" <button type='reset' name='Effacer' class='btn btn-danger  text-center'>Effacer</button>";
+    echo "</div>";
+    echo "</div>";
     echo '</form>';
 } else {
     echo '<h2>Votre inscription est effective</h2>';
     insutilisateur($_POST['pseudo'],$_POST['password'],$_POST['email'],$_POST['adresse'],$_POST['codepostal'],$_POST['telephone']);
-    echo '<a href=\'authentification.html\'><button>Se connecter</button></a>';
-    echo '<a href=\'index.php\'><button>Retour</button></a>';
+    echo "<a href=\'authentification.html\'><button class='btn btn-success'>Se connecter</button></a>";
+    echo "<a href=\'index.php\'><button class='btn btn-warning'>Retour</button></a>";
+
 }
 ?>
 </body>
