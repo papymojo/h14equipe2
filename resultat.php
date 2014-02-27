@@ -18,21 +18,22 @@ foreach($resultat as $produit) {
        echo '</tr><tr>';
     }
     echo '<td>
-        <div class="thumbnail">
-            <img src="'.$produit[7].'"
-                 alt="Generic placeholder thumbnail"
+        <div class="thumbnail" style="position : relative;">
+            <img src="'.$produit[8].'"
+                 alt="'.$produit[1].'"
                  height="240"
                  width="240">
-        </div>
-        <div class="caption">
-            <h3>'.$produit[1].'</h3>
-            <p>Prix de départ: '.$produit[2].'<p>
+        </div>';
+        if ( $produit[6]==1 ) echo '<img src="./images/vendu.png" height="140" width="220"
+        style="position : relative ;margin: -240px; left:260px; top : -160px;">';
+        echo '<div class="caption">
+            <h3>'.$produit[2].'</h3>
+            <p>Prix de départ: '.$produit[3].'<p>
             <p>
-                <a href="ficheproduit.php?='.$produit[0].'" class="btn btn-primary" role="button">
-                    Faire Une Proposition
+                <a href="ficheproduit.php?id='.$produit[0].'" class="btn btn-primary" role="button">
+                    Voir ça de plus près
                 </a>
-            </p>
-        </div>
+            </p></div>
     </td>';
 $ligne++;
 }
