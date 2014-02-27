@@ -21,7 +21,7 @@ require_once('./stripe/config.php');
             </select></div>
         <div class="col-md-6 text-center"><script src="https://checkout.stripe.com/checkout.js" class="stripe-button" id="bouton"
             data-key="<?php echo $stripe['publishable_key']; ?>"
-            data-description="Approvisionner le Porte Monaie" ></script></div>
+            data-description="Approvisionner le porte-monnaie" ></script></div>
         <div class="col-md-2"></div>
     </div>
 </form>

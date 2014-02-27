@@ -10,15 +10,59 @@
     <script type="text/javascript" src="./ckeditor/ckeditor.js"></script>
 </head>
 <form action="./verificationproduit.php" method="post" onSubmit="return validation(this)" enctype="multipart/form-data">
-    <label>Nom ...............................:</label><input type="text" name="nom" maxlength="25"/>
-    <label>Prix de Départ ....................:</label><input type="text" name="prix" maxlength="10"/>
-    <label>Durée de l'offre...................:</label><input type="text" name="duree" maxlength="10"/>
-    <label>Description .......................:</label><textarea class="ckeditor" name="description"  rows="10" cols="25"></textarea>
-    <label>Etat ..............................:</label><textarea class="ckeditor" name="etat" rows="10" cols="25"></textarea>
-    <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
-    <label>Image .............................:</label><input type="file" name="image" />
-    <input type="submit" name="Valider"/><input type="reset" name="Effacer"/>
+
+    <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">&nbsp;</div>
+                <div class="row"></div>
+                <form action="./verificationauth.php" method="post">
+                    <div class="form-group">
+                        <div class="col-md-6 text-center"><input class="form-control" type="text" id="nom" name="nom" maxlength="25" required="required" placeholder="Écrire le nom du produit ici"/></div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6 text-center"><input class="form-control" type="text" id="prix" name="prix" maxlength="10" required="required" placeholder="Écrire le prix de départ ici"/></div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6 text-center"><input class="form-control" type="text" id="duree" name="duree" maxlength="10" required="required" placeholder="Écrire la durée de l'offre (jours)""/></div>
+                        <div class="col-md-2"></div>
+                        <div class="row">&nbsp;</div>
+                        <div class="row">&nbsp;</div>
+                        <div class="row">&nbsp;</div>
+                    </div>
+                    <center><div id="ck">
+                        <div class="form-group">
+                            <label class="text-center bold">Écrire la description ci-dessous</label>
+                            <div class="col-md-6 text-center"><textarea class="ckeditor" name="description"  placeholder="Écrire la description ici" rows="10" cols="25"></textarea></div>
+                            <div class="col-md-2"></div>
+                            <div class="row">&nbsp;</div>
+                            <div class="row">&nbsp;</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="text-center bold">Écrire dans quel état est le produit ci-dessous</label>
+                            <div class="col-md-6 text-center"><textarea class="ckeditor" name="etat" title="Écrire dans quel état est le produit ici" rows="10" cols="25"></textarea></div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </div></center>
+
+
+
+                    <div class="form-group">
+                        <div class="col-md-offset-4 col-md-8 text-center">
+                            <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
+                            <input type="file" title="Téléverser une image" name="image"  class="btn btn-success  text-center">
+                            <button type="submit"name="Valider" class="btn btn-danger text-center">Envoyer</button>
+                            <button type="reset" name="Valider" class="btn btn-warning  text-center">Effacer</button>
+
+                        </div>
+                    </div>
+
 </form>
+
+
 </body>
 <div id="alerts">
     <noscript>
@@ -37,11 +81,11 @@ alert('Le prix est incorrect');
 return false;
 }
 if (!ck_jour.test(f.duree.value) ){
-alert('Veuillez entrer un nombre entier de jour pour la durée de l\'offre');
+alert('Veuillez entrer un nombre entier de jours pour la durée de l\'offre');
 return false;
 }
 if (f.description.value.length <= 10 ){
-alert('La description doit être complete');
+alert('La description doit être complète');
 return false;
 }
 if (f.etat.value.length <= 10){

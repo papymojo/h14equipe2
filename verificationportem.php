@@ -22,7 +22,7 @@ $charge = Stripe_Charge::create(array(
     'currency' => 'cad'
 ));
 include("./include/mysqlapi.inc.php");
-echo '<h1>Vous avez ajouté '.$_POST['montant'].'$ à votre Porte Monaie </h1>';
+echo '<h1>Vous avez ajouté '.$_POST['montant'].'$ à votre porte-monnaie </h1>';
 $_SESSION['argent'] = aprovisionner($_SESSION['pseudo'],$_POST['montant']);
 ?>
 <a href='index.php'><button class="btn btn-warning">Retour</button></a>

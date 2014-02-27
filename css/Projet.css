@@ -14,3 +14,13 @@
     left: 0;
     width: 100%;
 }
+
+#recherche
+{
+    margin-top:10px;
+}
+
+#ck
+{
+    max-width:35%;
+}
