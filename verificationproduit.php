@@ -13,12 +13,11 @@
  * Time: 10:42
  */
 include "./include/mysqlapi.inc.php";
-$dossier = 'images/produit/';
+$dossier = './images/produits/'.rand(-2147483648,2147483647).'/';
 $id = insproduit($_POST['nom'],$_POST['prix'],$_POST['duree'],mysql_real_escape_string($_POST['description']),mysql_real_escape_string($dossier.$_POST['nom'].'.jpg'),mysql_real_escape_string($_POST['etat']));
 if(isset($_FILES['image']))
 {
     $extensions = array('.jpeg','.jpg');
-    echo $_FILES['image']['tmp_name'];
     if (in_array(strrchr($_FILES['image']['name'], '.'), $extensions)) {
     move_uploaded_file($_FILES['image']['tmp_name'], $dossier . $_POST['nom'].'.jpg');
     } else {
