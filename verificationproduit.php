@@ -31,3 +31,4 @@ if(isset($_FILES['image']))
 <a href='index.php'><button>Retour</button></a>
 </body>
 </html>
+
