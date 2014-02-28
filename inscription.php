@@ -80,7 +80,7 @@
         return false;
     }
     if (!ck_post.test(f.codepostal.value)){
-        alert('Le format du codepostal est incorrect');
+        alert('Le format du code postal est incorrect');
         return false;
     }
     if (f.verifpassword.value!= f.password.value ) {
