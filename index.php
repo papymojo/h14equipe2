@@ -6,7 +6,7 @@
 
     <script type="text/javascript">
 
-        $(document).ready(function(){
+        $(document).ready(function () {
 
             $('.carousel').carousel();
 
@@ -17,6 +17,7 @@
 <body>
 <?php
 session_start();
+include "./include/mysqlapi.inc.php";
 echo '<iframe src="iframepanel.php?titre=Accueil" height="100" width="100%" name="panel" frameborder="0" ></iframe>';
 ?>
 
@@ -26,17 +27,10 @@ echo '<iframe src="iframepanel.php?titre=Accueil" height="100" width="100%" name
         <div class="span12 well">
             <div id="monCaroussel" class="carousel">
                 <div class="carousel-inner">
-
-
-                    <div class="item active text-center"><center><img class="img-rounded" src = "./images/enterprise.jpg" height="600" width="800"></center><h2>USS Enterprise</h2></div>
-                    <div class="item text-center"><center><img class="img-rounded" src = "./images/cheval.jpg" height="600" width="800"></center><h2>cheval</h2></div>
-                    <div class="item text-center"><center><img class="img-rounded" src = "./images/cochon.jpg" height="600" width="800"></center><h2>dédé</h2></div>
-
-
-
+                    <?php echo carousel(); ?>
                 </div>
-                <a class = "carousel-control left" href="#monCaroussel" data-slide="prev">&laquo;</span></a>
-                <a class = "carousel-control right" href="#monCaroussel" data-slide="next">&raquo;</span></a>
+                <a class="carousel-control left" href="#monCaroussel" data-slide="prev">&laquo;</span></a>
+                <a class="carousel-control right" href="#monCaroussel" data-slide="next">&raquo;</span></a>
             </div>
         </div>
     </div>
