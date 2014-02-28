@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+
 <?php
 /**
  * Created by PhpStorm.
@@ -53,8 +48,8 @@ function insutilisateur($pseudo,$password,$email,$adresse,$codepostal,$telephone
 }
 
 function insproduit($nom,$prix,$duree,$description,$image,$etat) {
-    requete("INSERT INTO produit (nom,prixdedepart,date,duree,vendu,description,image,etat) VALUES('"
-        .$nom."',".$prix.",SYSDATE(),".$duree.",0,'".$description."','".$image."','".$etat."')" );
+    requete("INSERT INTO produit (proprietaire,nom,prixdedepart,date,duree,vendu,description,image,etat) VALUES('"
+        .$_SESSION['userid']."',".$nom.",".$prix.",SYSDATE(),".$duree.",0,'".$description."','".$image."','".$etat."')" );
     $resultat = requete("SELECT id FROM produit WHERE nom = '".$nom."' AND date = '".$duree."'AND description = '".$description."'");
     return $resultat[0][0];
 }
@@ -79,4 +74,19 @@ function carousel() {
     $resultat = requete( "SELECT TOP 5 * FROM produit ORDER BY date");
     echo "<div class=\"item active text-center\"><center><img class=\"img-rounded\" src = ".$resultat[0][7]." height=\"600\" width=\"800\"></center><h2>".$resultat[0][1]."</h2></div>";
 }
+}
+
+function getProduit($id) {
+    $resultat = requete( "SELECT * FROM produit WHERE id=".$id."" );
+    return $resultat[0];
+}
+
+function getMeilleureOffre($id) {
+    $resultat = requete("SELECT * FROM offres WHERE fkproduit='".$id."' ORDER BY montant DESC");
+    return $resultat[0];
+}
+
+function insoffre($produit,$utilisateur,$montant) {
+    $resultat = requete("INSERT INTO offres (fkutilisateurs,fkproduit,date,montant) VALUE(".$utilisateur.",".$produit.",SYSDATE(),".$montant.")");
+    return $resultat;
 }
