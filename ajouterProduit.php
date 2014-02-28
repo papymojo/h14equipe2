@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Site d'enchères - Ajouter Produit </title>
+    <title>Site d'enchères - Ajouter produit </title>
     <?php include("./include/Dependances.html") ?>
 </head>
 <body>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-6 text-center"><input class="form-control" type="text" id="duree" name="duree" maxlength="10" required="required" placeholder="Écrire la durée de l'offre (jours)""/></div>
-                        <div class="col-md-2"></div>
+                        <div class="col-mdivd-2"></div>
                         <div class="row">&nbsp;</div>
                         <div class="row">&nbsp;</div>
                         <div class="row">&nbsp;</div>
@@ -48,11 +48,9 @@
                         </div>
                     </div></center>
 
-
-
                     <div class="form-group">
                         <div class="col-md-offset-4 col-md-8 text-center">
-                            <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
+                            <inpudivt type="hidden" name="MAX_FILE_SIZE" value="100000" />
                             <input type="file" title="Téléverser une image" name="image"  class="btn btn-success  text-center">
                             <button type="submit"name="Valider" class="btn btn-danger text-center">Envoyer</button>
                             <button type="reset" name="Valider" class="btn btn-warning  text-center">Effacer</button>
@@ -60,13 +58,15 @@
                         </div>
                     </div>
 
+
 </form>
 </body>
 <div id="alerts">
     <noscript>
         <p>
             <strong>CKEditor requires JavaScript to run</strong>. In a browser with no JavaScript support, like yours, you should still see the contents (HTML data) and you should be able to edit it normally, without a rich editor interface.
-        </p>
+        </p>div
+
     </noscript>
 </div>
 </html>
@@ -75,8 +75,8 @@ function validation(f) {
 var ck_number=/^\$?\d+(\.\d+)?$/;
 var ck_jour=/^\$?\d+?$/;
 if (!ck_number.test(f.prix.value) ){
-alert('Le prix est incorrect');
-return false;
+    alert('Le prix est incorrect');
+    return false;
 }
 if (!ck_jour.test(f.duree.value) ){
 alert('Veuillez entrer un nombre entier de jours pour la durée de l\'offre');
