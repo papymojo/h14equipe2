@@ -26,7 +26,7 @@
         } ?>
         <li>
             <form class="form-inline" role="form" action="resultat.php" method="POST">
-                <input type="search" class="form-control" name="achercher" placeholder="recherche">
+                <input type="search" class="form-control input-medium search-query" name="achercher" placeholder="recherche">
                 <input type="submit" name="Cherche" class="btn btn-success  text-center">
             </form>
         </li>

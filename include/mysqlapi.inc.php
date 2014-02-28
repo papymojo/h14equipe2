@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+
 <?php
 /**
  * Created by PhpStorm.
@@ -84,4 +79,14 @@ function carousel() {
 function getProduit($id) {
     $resultat = requete( "SELECT * FROM produit WHERE id=".$id."" );
     return $resultat[0];
+}
+
+function getMeilleureOffre($id) {
+    $resultat = requete("SELECT * FROM offres WHERE fkproduit='".$id."' ORDER BY montant DESC");
+    return $resultat[0];
+}
+
+function insoffre($produit,$utilisateur,$montant) {
+    $resultat = requete("INSERT INTO offres (fkutilisateurs,fkproduit,date,montant) VALUE(".$utilisateur.",".$produit.",SYSDATE(),".$montant.")");
+    return $resultat;
 }
