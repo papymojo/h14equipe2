@@ -1,5 +1,5 @@
 <head>
-    <base target="_parent" />
+    <base target="_parent"/>
     <?php include('./include/Dependances.html'); ?>
 
 </head>
@@ -26,14 +26,15 @@
         } ?>
         <li id="recherche">
             <form class="navbar-form navbar-left" role="search" action="resultat.php" method="POST">
-                <input type="search" class="form-control" name="achercher" placeholder="recherche">
-                <input type="submit" value = "Rechercher" name="Cherche" class="btn btn-success  text-center">
+                <input type="search" class="form-control input-medium search-query" name="achercher"
+                       placeholder="recherche">
+                <input type="submit" value="Rechercher" name="Cherche" class="btn btn-success  text-center">
             </form>
         </li>
         <?php
         session_start();
         if (isset($_SESSION['userid'])) {
-        echo "<li><a href=ajouterProduit.php><button class='btn btn-info text-center'>Vendre un produit</button></a></li>";
+            echo "<li><a href=ajouterProduit.php><button class='btn btn-info text-center'>Vendre un produit</button></a></li>";
         }
         ?>
         </ul>
