@@ -14,9 +14,10 @@
         $Session = $_SESSION['pseudo'];
 
         echo "<a class='brand' id='recherche'>$Titre</a>";
-        echo "<ul class='nav'>";
+        echo "<ul class='nav' >";
         if (isset($_SESSION['userid'])) {
-            echo "<a class='brand' id='recherche'>$Session</a>";
+            echo "<li><a href='modutilisateur.php?id=" . $_SESSION['userid'] . "' ><button class='btn btn-info text-center' data-toggle='tooltip' data-placement='bottom'
+            title='Cliquez sur votre pseudo pour modifier vos données personelles'>" . $Session . "</button></a></li>";
             echo "<li id='recherche'><a class='brand'>" . $_SESSION['argent'] . "$</a></li>";
             echo "<li><a href=ajouterauportemonaie.php><button class='btn btn-warning text-center'>Approvisionner</button></a></li>";
             echo "<li><a href=deconnexion.php><button class='btn btn-danger text-center'>Se déconnecter</button></a></li>";

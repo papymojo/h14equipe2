@@ -27,7 +27,7 @@ if (isset($_FILES['image'])) {
 ?>
 <h2>Le Produit à été mis en vente</h2>
 <a href='index.php'>
-    <button>Retour</button>
+    <button class="btn btn-warning">Retour</button>
 </a>
 </body>
 </html>
