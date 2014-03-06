@@ -6,7 +6,7 @@
 </head>
 <body>
 <iframe src="iframepanel.php?titre=Inscription" height="100" width="100%" name="panel" frameborder="0" ></iframe>
-<table><tr>
+<table class="text-center"><tr>
 <?php
 include "./include/mysqlapi.inc.php";
 $resultat=moteurDeRecherche($_POST['achercher']);
@@ -24,16 +24,21 @@ foreach($resultat as $produit) {
                  height="240"
                  width="240">
         </div>';
-        if ( $produit[6]==1 ) echo '<img src="./images/vendu.png" height="140" width="220"
-        style="position : relative ;margin: -240px; left:260px; top : -160px;">';
+
         echo '<div class="caption">
             <h3>'.$produit[2].'</h3>
-            <p>Prix de départ: '.$produit[3].'<p>
-            <p>
-                <a href="ficheproduit.php?id='.$produit[0].'" class="btn btn-primary" role="button">
-                    Voir ça de plus près
-                </a>
-            </p></div>
+            <p>Prix de départ: '.$produit[3].'</p>
+            <p>';
+                if ( $produit[6]==1 )
+                {
+                   echo'<a href="ficheproduit.php?id='.$produit[0].'" class="btn btn-danger" role="button">Vendu!!!</a>
+            </p>';
+                }
+                else{
+                echo'<a href="ficheproduit.php?id='.$produit[0].'" class="btn btn-primary" role="button">
+                    Voir ça de plus près</a>';
+                }
+           echo'</div>
     </td>';
 $ligne++;
 }
