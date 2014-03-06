@@ -5,44 +5,51 @@
     <?php include('./include/Dependances.html'); ?>
 </head>
 <body>
-<iframe src="iframepanel.php?titre=Inscription" height="100" width="100%" name="panel" frameborder="0" ></iframe>
-<table class="text-center"><tr>
-<?php
-include "./include/mysqlapi.inc.php";
-$resultat=moteurDeRecherche($_POST['achercher']);
+<iframe src="iframepanel.php?titre=Inscription" height="100" width="100%" name="panel" frameborder="0"></iframe>
+<center>
+    <table class="text-center">
+        <tr>
+            <?php
+            include "./include/mysqlapi.inc.php";
+            $resultat = moteurDeRecherche($_POST['achercher']);
 
-$ligne=0;
-foreach($resultat as $produit) {
-    if ($ligne == 4){
-       $ligne = 0;
-       echo '</tr><tr>';
-    }
-    echo '<td>
-        <div class="thumbnail" style="position : relative;">
-            <img src="'.$produit[8].'"
+            $ligne = 0;
+            foreach ($resultat as $produit) {
+                if ($ligne == 4) {
+                    $ligne = 0;
+                    echo '</tr><tr>';
+                }
+                echo '<td style="padding-left:20px;"><div';
+                if ($produit[6]) {
+                    echo ' class="alert alert-danger"';
+                } else {
+                    echo ' class="alert alert-info"';
+                }
+                echo ' >
+        <div  style="position : relative; height:200px; width:200px;overflow:auto; ">
+            <img class="img-rounded" src="' . $produit[8] . '"
                  alt="' . $produit[2] . '"
-                 height="240"
-                 width="240">
+                 style="height:160px; width:200px">
         </div>';
 
-        echo '<div class="caption">
-            <h3>'.$produit[2].'</h3>
-            <p>Prix de départ: '.$produit[3].'</p>
+                echo '<div class="caption">
+            <h3>' . substr($produit[2], 0, 12) . '</h3>
+            <p>Prix de départ: ' . $produit[3] . '</p>
             <p>';
-                if ( $produit[6]==1 )
-                {
-                   echo'<a href="ficheproduit.php?id='.$produit[0].'" class="btn btn-danger" role="button">Vendu!!!</a>
+                if ($produit[6]) {
+                    echo '<a href="ficheproduit.php?id=' . $produit[0] . '" class="btn btn-danger" role="button">Vendu!!!</a>
             </p>';
-                }
-                else{
-                echo'<a href="ficheproduit.php?id='.$produit[0].'" class="btn btn-primary" role="button">
+                } else {
+                    echo '<a href="ficheproduit.php?id=' . $produit[0] . '" class="btn btn-primary" role="button">
                     Voir ça de plus près</a>';
                 }
-           echo'</div>
+                echo '</div></div>
     </td>';
-$ligne++;
-}
-?>
-</table></tr>
+                $ligne++;
+            }
+            ?>
+        </tr>
+    </table>
+</center>
 
 </body>
