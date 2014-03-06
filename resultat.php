@@ -20,7 +20,7 @@ foreach($resultat as $produit) {
     echo '<td>
         <div class="thumbnail" style="position : relative;">
             <img src="'.$produit[8].'"
-                 alt="'.$produit[1].'"
+                 alt="' . $produit[2] . '"
                  height="240"
                  width="240">
         </div>';
