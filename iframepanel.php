@@ -22,8 +22,8 @@
             echo "<li><a href=ajouterauportemonaie.php><button class='btn btn-warning text-center' data-toggle='tooltip' data-placement='bottom' title='Approvisionnez votre porte monaie'><i class='icon-large icon-white  icon-shopping-cart'></i> " . number_format($_SESSION['argent'], 2, ",", " ") . "$</button></a></li>";
             echo "<li><a href=deconnexion.php><button class='btn btn-danger text-center' data-toggle='tooltip' data-placement='bottom' title='Déconnectez vous'><i class='icon-large icon-off icon-white'></i> Se déconnecter</button></a></li>";
         } else {
-            echo "<li><a href=authentification.php><button class='btn btn-success ' data-toggle='tooltip' data-placement='bottom' title='Se connecter pour effectuer des achats'>Se connecter</button></a></li>";
-            echo "<li><a href=inscription.php><button class='btn btn-info text-center'>Inscription</button></a></li>";
+            echo "<li><a href=authentification.php><button class='btn btn-success ' data-toggle='tooltip' data-placement='bottom' title='Se connecter pour effectuer des achats'><i class='icon-large icon-off icon-white'></i></i> Se connecter</button></a></li>";
+            echo "<li><a href=inscription.php><button class='btn btn-info text-center'><i class='icon-large icon-pencil icon-white'></i> Inscription</button></a></li>";
         } ?>
         <li id="recherche">
             <form class="navbar-form navbar-left" role="search" action="resultat.php" method="POST">

@@ -60,8 +60,8 @@ if (!empty($dispo)) {
 } else {
     echo '<h2>Votre inscription est effective</h2>';
     insutilisateur($_POST['pseudo'], $_POST['password'], $_POST['email'], $_POST['adresse'], $_POST['codepostal'], $_POST['telephone']);
-    echo "<a href=\'authentification.php\'><button class='btn btn-success'>Se connecter</button></a>";
-    echo "<a href=\'index.php\'><button class='btn btn-warning'>Retour</button></a>";
+    echo "<a href='authentification.php'><button class='btn btn-success'>Se connecter</button></a>";
+    echo "<a href='index.php'><button class='btn btn-warning'>Retour</button></a>";
 }
 ?>
 </body>
@@ -72,12 +72,12 @@ if (!empty($dispo)) {
             alert('Problème de mot de passe');
             return false;
         }
-        if (f.verifpassword.value.length <= 7) {
-            alert('Le mot de passe doit contenir au moins 7 caractères');
+        if (f.verifpassword.value.length < 7) {
+            alert('Le mot de passe doit contenir au moins 8 caractères');
             return false;
         }
-        if (f.pseudo.value.length <= 4) {
-            alert('Le pseudonyme doit contenir au moins 4 caractères');
+        if (f.pseudo.value.length < 4) {
+            alert('Le pseudonyme doit contenir au moins 5 caractères');
             return false;
         }
         return true;
