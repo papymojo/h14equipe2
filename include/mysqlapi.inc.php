@@ -104,3 +104,8 @@ function insoffre($produit, $utilisateur, $montant)
     $resultat = requete("INSERT INTO offres (fkutilisateurs,fkproduit,date,montant) VALUE(" . $utilisateur . "," . $produit . ",SYSDATE()," . $montant . ")");
     return $resultat;
 }
+
+function getinfouser($id) {
+    $resultat = requete("SELECT * FROM utilisateurs WHERE id = ".$id."");
+    return $resultat[0];
+}
