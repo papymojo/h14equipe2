@@ -19,13 +19,13 @@
                     $ligne = 0;
                     echo '</tr><tr>';
                 }
-                echo '<td style="padding-left:20px;"><div';
+                echo '<td><div';
                 if ($produit[6]) {
-                    echo ' class="alert alert-danger"';
+                    echo ' class="alert-danger"';
                 } else {
-                    echo ' class="alert alert-info"';
+                    echo ' class="alert-info"';
                 }
-                echo ' >
+                echo ' style="padding:20px; margin:20px;">
         <div  style="position : relative; height:200px; width:200px;overflow:auto; ">
             <img class="img-rounded" src="' . $produit[8] . '"
                  alt="' . $produit[2] . '"
