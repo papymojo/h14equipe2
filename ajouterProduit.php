@@ -32,22 +32,30 @@
                         <div class="row">&nbsp;</div>
                         <div class="row">&nbsp;</div>
                     </div>
-                    <center><div id="ck">
-                        <div class="form-group">
-                            <label class="text-center bold">Écrire la description ci-dessous</label>
-                            <div class="col-md-6 text-center"><textarea class="ckeditor" name="description"  placeholder="Écrire la description ici" rows="10" cols="25"></textarea></div>
-                            <div class="col-md-2"></div>
-                            <div class="row">&nbsp;</div>
-                            <div class="row">&nbsp;</div>
-                        </div>
 
-                        <div class="form-group">
-                            <label class="text-center bold">Écrire dans quel état est le produit ci-dessous</label>
-                            <div class="col-md-6 text-center"><textarea class="ckeditor" name="etat" title="Écrire dans quel état est le produit ici" rows="10" cols="25"></textarea></div>
-                            <div class="col-md-2"></div>
-                        </div>
-                    </div></center>
 
+                    <center>
+                        <table>
+                            <div id="ck">
+                            <td>
+                                <div class="form-group">
+                                <label class="text-center bold">Écrire la description ci-dessous</label>
+                                <div class="col-md-6 text-center"><textarea class="ckeditor" name="description"  placeholder="Écrire la description ici" rows="10" cols="25"></textarea></div>
+                                <div class="col-md-2"></div>
+                                                           </td>
+                        </div>
+                            <td>
+                                <div class="form-group">
+                                    <label class="text-center bold">Écrire dans quel état est le produit ci-dessous</label>
+                                    <div class="col-md-6 text-center"><textarea class="ckeditor" name="etat" title="Écrire dans quel état est le produit ici" rows="10" cols="25"></textarea></div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </td>
+                        </div>
+                        </table>
+                    </center>
+            <div class="row">&nbsp;</div>
+            <div class="row">&nbsp;</div>
                     <div class="form-group">
                         <div class="col-md-offset-4 col-md-8 text-center">
                             <inpudivt type="hidden" name="MAX_FILE_SIZE" value="100000" />
@@ -57,6 +65,7 @@
 
                         </div>
                     </div>
+        </div>
 
 
 </form>
