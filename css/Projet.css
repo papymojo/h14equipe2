@@ -1,3 +1,7 @@
+body {
+    background-color: #CEDEF4;
+}
+
 #navbar {
     background: #aebcbf; /* Old browsers */
     background: -moz-linear-gradient(top, #aebcbf 0%, #6e7774 15%, #0a0809 100%); /* FF3.6+ */

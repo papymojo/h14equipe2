@@ -7,7 +7,7 @@
 <body>
 <iframe src="iframepanel.php?titre=Inscription" height="100" width="100%" name="panel" frameborder="0"></iframe>
 <center>
-    <table class="text-center">
+    <table class="text-center hero-unit" style="background-color:white;">
         <tr>
             <?php
             include "./include/mysqlapi.inc.php";
@@ -25,7 +25,7 @@
                 } else {
                     echo ' class="alert-info"';
                 }
-                echo ' style="padding:20px; margin:20px;">
+                echo ' style="padding:20px; margin:20px; border-radius: 10px;">
         <div  style="position : relative; height:200px; width:200px;overflow:auto; ">
             <img class="img-rounded" src="' . $produit[8] . '"
                  alt="' . $produit[2] . '"
