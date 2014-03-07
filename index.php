@@ -18,7 +18,7 @@
 <?php
 session_start();
 include("./include/mysqlapi.inc.php");
-echo '<iframe src="iframepanel.php?titre=Accueil" height="100" width="100%" name="panel" frameborder="0" ></iframe>';
+echo '<iframe src="iframepanel.php?titre=Accueil" height="100" width="100%" name="panel" frameborder="0"></iframe>';
 ?>
 
 
