@@ -20,9 +20,9 @@
 
         <h2 class="alert-info">Informations : </h2>
         Prix de départ : <?php echo number_format($produit[3], 2, ',', ' ') . "$" ?></br>
-        Mise en vente : <?php echo date('d/m/Y', $produit[4]) ?></br>
+        Mise en vente : <?php echo date('d/m/Y', strtotime($produit[4])) ?></br>
         Fin de l'offre
-        : <?php echo date('d/m/Y', strtotime('+' . $produit['5'] . 'day', $produit[3])); ?></br></br>
+        : <?php echo date('d/m/Y', strtotime('+' . $produit['5'] . 'day', strtotime($produit[3]))); ?></br></br>
         <h2 class="alert-info">Description : </h2><br/> <?php echo $produit[7] . "<br/>" ?>
         <h2 class="alert-info">Etat : </h2><br/> <?php echo $produit[9] . "<br/>" ?>
         <?php if (isset($_SESSION['userid']) && !$produit[6]) {
