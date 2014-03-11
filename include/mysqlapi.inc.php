@@ -79,7 +79,7 @@ function moteurDeRecherche($motclee)
 
 function carousel()
 {
-    $resultat = requete("SELECT * FROM produit ORDER BY date LIMIT 5");
+    $resultat = requete("SELECT * FROM produit ORDER BY date DESC LIMIT 5");
     $chaine = "<div class=\"item active text-center\"><center><a  href=ficheproduit.php?id='" . $resultat[0][0] . "' ><img class=\"img-rounded\" src = '" . $resultat[0][8] . "' style='height:600px; width:800px;'></a></center><h2>" . $resultat[0][2] . "</h2></div>";
     for ($i = 1; $i < 5; $i++) {
         $chaine .= "<div class=\"item text-center\"><center><a  href=ficheproduit.php?id='" . $resultat[$i][0] . "' ><img class=\"img-rounded\" src = '" . $resultat[$i][8] . "'  style='height:600px; width:800px;'></a></center><h2>" . $resultat[$i][2] . "</h2></div>";
