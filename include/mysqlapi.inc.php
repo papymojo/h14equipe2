@@ -109,3 +109,32 @@ function getinfouser($id) {
     $resultat = requete("SELECT * FROM utilisateurs WHERE id = ".$id."");
     return $resultat[0];
 }
+
+function getventes()
+{
+    $offres = requete(" SELECT *
+                            FROM offres o1,produit,utilisateurs
+                            WHERE  montant = (     SELECT MAX( montant )
+                                    FROM offres o2
+                                    WHERE o1.fkproduit = o2.fkproduit)
+                            AND vendu = 0
+                            AND o1.fkproduit = produit.id
+                            AND o1.fkutilisateurs = utilisateurs.id
+                            AND SYSDATE() > DATE_ADD(produit.date, INTERVAL duree DAY)");
+    return $offres;
+}
+
+function updateventes()
+{
+    requete(" UPDATE offres o1,produit,utilisateurs
+                SET vendu=1
+                , portemonaie = portemonaie - o1.montant
+                            WHERE  montant = (     SELECT MAX( montant )
+                                    FROM offres o2
+                                    WHERE o1.fkproduit = o2.fkproduit)
+                            AND vendu = 0
+                            AND o1.fkproduit = produit.id
+                            AND o1.fkutilisateurs = utilisateurs.id
+                            AND SYSDATE() > DATE_ADD(produit.date, INTERVAL duree DAY)");
+    return 1;
+}
