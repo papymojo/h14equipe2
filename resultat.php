@@ -37,7 +37,7 @@
 
                 echo '<div class="caption">
             <h3>' . substr($produit[2], 0, 12) . '</h3>
-            <p>Prix de départ: ' . $produit[3] . '</p>
+            <p>Prix de départ: ' . number_format($produit[3], 2, ",", " ") . '$</p>
             <p>';
                 if ($produit[6]) {
                     echo '<a href="ficheproduit.php?id=' . $produit[0] . '" class="btn btn-danger" role="button">Vendu!!!</a>
