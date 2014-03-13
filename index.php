@@ -24,14 +24,9 @@ echo '<iframe src="iframepanel.php?titre=Accueil" height="100" width="100%" name
 
 <div class="container">
     <div class="row">
-        <div class="span12 well">
             <div id="monCaroussel" class="carousel">
                 <div class="carousel-inner">
-
-
                     <?php echo carousel(); ?>
-
-
                 </div>
                 <a class="carousel-control left" href="#monCaroussel" data-slide="prev">&laquo;</span></a>
                 <a class="carousel-control right" href="#monCaroussel" data-slide="next">&raquo;</span></a>

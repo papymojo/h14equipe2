@@ -91,11 +91,11 @@ if (!ck_jour.test(f.duree.value) ){
 alert('Veuillez entrer un nombre entier de jours pour la durée de l\'offre');
 return false;
 }
-if (f.description.value.length <= 10 ){
+if (f.description.value.length =0 ){
 alert('La description doit être complète');
 return false;
 }
-if (f.etat.value.length <= 10){
+if (f.etat.value.length =0){
 alert('Vous devez indiquer l\'état de l\'objet');
 return false;
 }
