@@ -17,19 +17,21 @@ $utilisateur = getinfouser($_SESSION['userid']);
             <div class="panel-body">
                 <div class="row">&nbsp;</div>
                 <div class="row"></div>
-                <form action="./verificationinsc.php" style="text-align: center" method="post"
+                <form action="./verificationmodif.php" style="text-align: center" method="post"
                       onSubmit="return validation(this)">
                     <div class="form-group">
                         <div class="col-md-2 col-md-offset-2 text-center"></div>
                         <div class="col-md-6 text-center"><input class="form-control" type="text" id="pseudo"
                                                                  name="pseudo" required="required" readonly
-                                                                 placeholder=' <?php echo $utilisateur[1] ?> ' maxlength="25"/></div>
+                                                                 value='<?php echo $utilisateur[1] ?>' maxlength="25"/>
+                        </div>
                         <div class="col-md-2"></div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-2 col-md-offset-2 text-center"></div>
                         <div class="col-md-6 text-center"><input class="form-control" type="text" id="email"
-                                                                 name="email" required="required" placeholder=' <?php echo $utilisateur[3] ?> '
+                                                                 name="email" required="required"
+                                                                 value='<?php echo $utilisateur[3] ?>'
                                                                  maxlength="50"/></div>
                         <div class="col-md-2"></div>
                     </div>
@@ -53,7 +55,8 @@ $utilisateur = getinfouser($_SESSION['userid']);
                             <div class="col-md-2 col-md-offset-2 text-center"></div>
                             <div class="col-md-6 text-center"><input class="form-control" type="text" id="telephone"
                                                                      name="telephone" required="required"
-                                                                     placeholder=' <?php echo $utilisateur[6] ?> '  maxlength="25"/>
+                                                                     value='<?php echo $utilisateur[6] ?>'
+                                                                     maxlength="25"/>
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -61,15 +64,17 @@ $utilisateur = getinfouser($_SESSION['userid']);
                             <div class="col-md-2 col-md-offset-2 text-center"></div>
                             <div class="col-md-6 text-center"><textarea class="form-control" type="text" id="adresse"
                                                                         name="adresse" maxlengt="" row="2" cols="30.5"
-                                                                        required="required" placeholder=' <?php echo $utilisateur[4] ?> '
-                                                                        maxlength="500"/></textarea></div>
+                                                                        required="required"
+                                                                        maxlength="500"/><?php echo $utilisateur[4] ?></textarea>
+                            </div>
                             <div class="col-md-2"></div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-2 col-md-offset-2 text-center"></div>
                             <div class="col-md-6 text-center"><input class="form-control" type="text" id="codepostal"
                                                                      name="codepostal" required="required"
-                                                                     placeholder=' <?php echo $utilisateur[5] ?> '  maxlength="25"/></div>
+                                                                     value='<?php echo $utilisateur[5] ?>'
+                                                                     maxlength="25"/></div>
                             <div class="col-md-2"></div>
                         </div>
                         <div class="form-group">
@@ -106,16 +111,12 @@ $utilisateur = getinfouser($_SESSION['userid']);
             alert('Le format du codepostal est incorrect');
             return false;
         }
-        if (f.verifpassword.value != f.password.value) {rel="drevil">
+        if (f.verifpassword.value != f.password.value) {
             alert('Problème de mot de passe');
             return false;
         }
         if (f.verifpassword.value.length <= 7) {
             alert('Le mot de passe doit contenir au moins 7 caractères');
-            return false;
-        }
-        if (f.pseudo.value.length <= 4) {http://localhost/wordpress/wp-admin/
-            alert('Le pseudonyme doit contenir au moins 4 caractères');
             return false;
         }
         if (f.adresse.value.length <= 10) {
@@ -128,7 +129,7 @@ $utilisateur = getinfouser($_SESSION['userid']);
         $("[rel=drevil]").popover({
             placement : 'left',
             html: 'true',
-            content : "Si vous voulez conserver votre mot de passe actuel, vous devez le resaisir, sinon c'est ici que vous le changez"
+            content: "Si vous voulez conserver votre mot de passe actuel, vous devez le ressaisir, sinon c'est ici que vous le changez"
         });
     });
 

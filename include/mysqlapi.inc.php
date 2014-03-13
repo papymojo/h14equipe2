@@ -110,6 +110,12 @@ function getinfouser($id) {
     return $resultat[0];
 }
 
+function updateutilisateur($id, $email, $motdepasse, $tel, $adresse, $codepostal)
+{
+    $resultat = requete("UPDATE utilisateurs SET password ='" . $motdepasse . "',email = '" . $email . "', adresse = '" . $adresse . "',codepostal = '" . $codepostal . "',telephone = '" . $tel . "'WHERE id = " . $id . "");
+    return $resultat;
+}
+
 function getventes()
 {
     $offres = requete(" SELECT *
