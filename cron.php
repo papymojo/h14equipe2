@@ -2,6 +2,7 @@
 include("./include/mysqlapi.inc.php");
 $headers = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+$headers .= 'From: Site d\'enchères <SiteDEncheres@projet.qc.ca>' . "\r\n";
 
 
 echo "start cron task";
