@@ -5,7 +5,8 @@
     <?php include('./include/Dependances.html'); ?>
 </head>
 <body>
-<iframe src="iframepanel.php?titre=Inscription" height="80" width="100%" name="panel" frameborder="0"></iframe>
+<iframe src="iframepanel.php?titre=Résultat de la recherche" height="80" width="100%" name="panel"
+        frameborder="0"></iframe>
 <center>
     <div style="height: 500px; width: 90%; overflow: auto; background-color:white; border-radius: 10px; ">
         <table class="text-center"
