@@ -114,7 +114,7 @@ $utilisateur = getinfouser($_SESSION['userid']);
             alert('Le mot de passe doit contenir au moins 7 caractères');
             return false;
         }
-        if (f.pseudo.value.length <= 4) {
+        if (f.pseudo.value.length <= 4) {http://localhost/wordpress/wp-admin/
             alert('Le pseudonyme doit contenir au moins 4 caractères');
             return false;
         }
