@@ -19,7 +19,7 @@
 include "./include/mysqlapi.inc.php";
 session_start();
 echo '<h2>La modification de votre compte a été effectuée</h2>';
-updateutilisateur($_SESSION['userid'], $_POST['email'], $_POST['password'], $_POST['telephone'], $_POST['adresse'], $_POST['codepostal']);
+updateutilisateur(mysql_real_escape_string($_SESSION['userid']), mysql_real_escape_string($_POST['email']), mysql_real_escape_string($_POST['password']), $_POST['telephone'], mysql_real_escape_string($_POST['adresse']), $_POST['codepostal']);
 echo "<a href='index.php'><button class='btn btn-warning'>Retour</button></a>";
 ?>
 </body>

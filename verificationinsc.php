@@ -59,7 +59,7 @@ if (!empty($dispo)) {
     echo '</form>';
 } else {
     echo '<h2>Votre inscription est effective</h2>';
-    insutilisateur($_POST['pseudo'], $_POST['password'], $_POST['email'], $_POST['adresse'], $_POST['codepostal'], $_POST['telephone']);
+    insutilisateur(mysql_real_escape_string($_POST['pseudo']), mysql_real_escape_string($_POST['password']), mysql_real_escape_string($_POST['email']), mysql_real_escape_string($_POST['adresse']), $_POST['codepostal'], $_POST['telephone']);
     echo "<a href='authentification.php'><button class='btn btn-success'>Se connecter</button></a>";
     echo "<a href='index.php'><button class='btn btn-warning'>Retour</button></a>";
 }
