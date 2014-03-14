@@ -18,6 +18,12 @@ require_once('./stripe/config.php');
                 <option value="50">50.00 $</option>
                 <option value="100">100.00 $</option>
                 <option value="400">400.00 $</option>
+                <option value="800">800.00 $</option>
+                <option value="1200">1 200.00 $</option>
+                <option value="5000">5 000.00 $</option>
+                <option value="10000">10 000.00 $</option>
+                <option value="50000">50 000.00 $</option>
+                <option value="100000">100 000.00 $</option>
             </select></div>
         <div class="col-md-6 text-center">
             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" id="bouton"
