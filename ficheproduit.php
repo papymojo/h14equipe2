@@ -55,6 +55,10 @@
         return 0;
     }
     function verif(f) {
+        if (f.montant.value > <?php echo $_SESSION['argent']; ?>) {
+            alert("Vous n'avez pas les moyens pour effectuer cette enchère");
+            return false;
+        }
         if (f.montant.value <= f.valeurpardefaut.value) {
             alert("Vous devez faire une offre supérieure à l'offre précédante.");
             return false;
