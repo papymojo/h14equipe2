@@ -20,9 +20,8 @@ session_start();
 include("./include/mysqlapi.inc.php");
 echo '<iframe src="iframepanel.php?titre=Accueil" height="80" width="100%" name="panel" frameborder="0"></iframe>';
 ?>
-<div style="width : 80%;   margin-left: auto;
-  margin-right: auto;">
-    <div id="monCaroussel" class="carousel slide" data-ride="carousel">
+<div style="width : 80%;   margin-left: auto;  margin-right: auto;">
+<div id="monCaroussel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
                     <?php echo carousel(); ?>
                 </div>
