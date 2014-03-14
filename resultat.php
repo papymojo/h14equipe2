@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
+    <meta charset="UTF-8">
     <title>Site d'enchères - Resultat pour <?php echo $_POST['achercher'] ?> </title>
     <?php include('./include/Dependances.html'); ?>
 </head>
