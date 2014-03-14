@@ -21,10 +21,10 @@ include("./include/mysqlapi.inc.php");
 echo '<iframe src="iframepanel.php?titre=Accueil" height="80" width="100%" name="panel" frameborder="0"></iframe>';
 ?>
 <div style="width : 80%;   margin-left: auto;  margin-right: auto;">
-<div id="monCaroussel" class="carousel slide" data-ride="carousel">
+    <div id="monCaroussel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-                    <?php echo carousel(); ?>
-                </div>
+            <?php echo carousel(); ?>
+        </div>
         <a class="carousel-control left" href="#monCaroussel" data-slide="prev">&lsaquo;</a>
         <a class="carousel-control right" href="#monCaroussel" data-slide="next">&rsaquo;</a>
         <ol class="carousel-indicators ">
@@ -41,7 +41,6 @@ echo '<iframe src="iframepanel.php?titre=Accueil" height="80" width="100%" name=
         </ol>
     </div>
 </div>
-div>
 </body>
 </html>
 
