@@ -36,7 +36,7 @@
         </div>';
 
                 echo '<div class="caption">
-            <h3>' . $produit[2] . '</h3>
+            <h3>' . mb_substr($produit[2], 0, 13, 'UTF-8') . '</h3>
             <p>Prix de départ: ' . number_format($produit[3], 2, ",", " ") . '$</p>
             <p>';
                 if ($produit[6]) {
