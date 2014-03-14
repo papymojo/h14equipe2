@@ -80,9 +80,33 @@ function moteurDeRecherche($motclee)
 function carousel()
 {
     $resultat = requete("SELECT * FROM produit ORDER BY date DESC LIMIT 10");
-    $chaine = "<div class=\"item active text-center\"><center><a  href=ficheproduit.php?id='" . $resultat[0][0] . "' ><img class=\"img-rounded\" src = \"" . $resultat[0][8] . "\" style='height:600px; width:800px;'></a></center><h2>" . $resultat[0][2] . "</h2></div>";
+    $chaine = "<div class=\"item active text-center\"style=''>
+               <center>
+               <div style='height:500px;'>
+               <a  href=ficheproduit.php?id='" . $resultat[0][0] . "' >
+               <img class=\"img-responsive\" src = \"" . $resultat[0][8] . "\" style=' width:100%; heigth: 400px; overflow:hidden;'>
+               </a>
+               </div>
+               </center>
+                    <div class='carousel-caption'>
+                    <h4>" . $resultat[0][2] . "</h4>
+                    <p>" . mb_substr($resultat[0][7], 0, 200, 'UTF-8') . "</p>
+                    </div>
+               </div>";
     for ($i = 1; $i < 10; $i++) {
-        $chaine .= "<div class=\"item text-center\"><center><a  href=ficheproduit.php?id='" . $resultat[$i][0] . "' ><img class=\"img-rounded\" src = \"" . $resultat[$i][8] . "\"  style='height:600px; width:800px;'></a></center><h2>" . $resultat[$i][2] . "</h2></div>";
+        $chaine .= "<div class=\"item text-center\">
+                    <center>
+                    <div style='height:500px;'>
+                    <a  href=ficheproduit.php?id='" . $resultat[$i][0] . "' >
+                    <img class=\"img-responsive\" src = \"" . $resultat[$i][8] . "\"  style=' width:100%;overflow:hidden; heigth: 400px; '>
+                    </a>
+                    </div>
+                    </center>
+                    <div class='carousel-caption'>
+                    <h4>" . $resultat[$i][2] . "</h4>
+                    <p>" . mb_substr($resultat[$i][7], 0, 200, 'UTF-8') . "</p>
+                    </div>
+                    </div>";
     }
     return $chaine;
 }
@@ -105,8 +129,9 @@ function insoffre($produit, $utilisateur, $montant)
     return $resultat;
 }
 
-function getinfouser($id) {
-    $resultat = requete("SELECT * FROM utilisateurs WHERE id = ".$id."");
+function getinfouser($id)
+{
+    $resultat = requete("SELECT * FROM utilisateurs WHERE id = " . $id . "");
     return $resultat[0];
 }
 

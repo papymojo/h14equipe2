@@ -18,23 +18,31 @@
 <?php
 session_start();
 include("./include/mysqlapi.inc.php");
-echo '<iframe src="iframepanel.php?titre=Accueil" height="100" width="100%" name="panel" frameborder="0"></iframe>';
+echo '<iframe src="iframepanel.php?titre=Accueil" height="80" width="100%" name="panel" frameborder="0"></iframe>';
 ?>
-
-
-<div class="container">
-    <div class="row">
-            <div id="monCaroussel" class="carousel">
-                <div class="carousel-inner">
+<div style="width : 80%;   margin-left: auto;
+  margin-right: auto;">
+    <div id="monCaroussel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
                     <?php echo carousel(); ?>
                 </div>
-                <a class="carousel-control left" href="#monCaroussel" data-slide="prev">&laquo;</span></a>
-                <a class="carousel-control right" href="#monCaroussel" data-slide="next">&raquo;</span></a>
-            </div>
-        </div>
+        <a class="carousel-control left" href="#monCaroussel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#monCaroussel" data-slide="next">&rsaquo;</a>
+        <ol class="carousel-indicators ">
+            <li data-target="#monCaroussel" data-slide-to="0" class="active"></li>
+            <li data-target="#monCaroussel" data-slide-to="1"></li>
+            <li data-target="#monCaroussel" data-slide-to="2"></li>
+            <li data-target="#monCaroussel" data-slide-to="3"></li>
+            <li data-target="#monCaroussel" data-slide-to="4"></li>
+            <li data-target="#monCaroussel" data-slide-to="5"></li>
+            <li data-target="#monCaroussel" data-slide-to="6"></li>
+            <li data-target="#monCaroussel" data-slide-to="7"></li>
+            <li data-target="#monCaroussel" data-slide-to="8"></li>
+            <li data-target="#monCaroussel" data-slide-to="9"></li>
+        </ol>
     </div>
-
 </div>
+div>
 </body>
 </html>
 

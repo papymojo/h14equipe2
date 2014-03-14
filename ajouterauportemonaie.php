@@ -12,8 +12,8 @@ require_once('./stripe/config.php');
     <div class="form-group">
         <div class="col-md-2 col-md-offset-2 text-center"></div>
         <div class="col-md-6 text-center"><label>montant :</label></div>
-        <div class="col-md-6 text-center"><select class="form-control" name="montant">
-                <option value="10">10.00 $</option>
+        <div class="col-md-6 text-center"><select class="form-control input-lg" name="montant">
+            <option value="10">10.00 $</option>
                 <option value="20">20.00 $</option>
                 <option value="50">50.00 $</option>
                 <option value="100">100.00 $</option>
