@@ -5,8 +5,8 @@
 </head>
 </head>
 <body>
-<div class="navbar">
-    <div class="navbar-inner">
+<div class="navbar navbar-inverse">
+<div class="navbar-inner">
 
         <?php
         session_start();
