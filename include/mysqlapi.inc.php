@@ -90,7 +90,7 @@ function carousel()
                </center>
                     <div class='carousel-caption'>
                     <h4>" . $resultat[0][2] . "</h4>
-                    <p>" . mb_substr($resultat[0][7], 0, 200, 'UTF-8') . "</p>
+                    <p>" . mb_substr(strip_tags($resultat[0][7]), 0, 200, 'UTF-8') . "</p>
                     </div>
                </div>";
     for ($i = 1; $i < 10; $i++) {
@@ -104,7 +104,7 @@ function carousel()
                     </center>
                     <div class='carousel-caption'>
                     <h4>" . $resultat[$i][2] . "</h4>
-                    <p>" . mb_substr($resultat[$i][7], 0, 200, 'UTF-8') . "</p>
+                    <p>" . mb_substr(strip_tags($resultat[$i][7]), 0, 200, 'UTF-8') . "</p>
                     </div>
                     </div>";
     }
