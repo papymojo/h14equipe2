@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>Site d'enchères - Resultat pour <?php echo $_POST['achercher'] ?> </title>
     <?php include('./include/Dependances.html'); ?>
+    <title>Site d'enchères - Resultat pour <?php echo $_POST['achercher'] ?> </title>
 </head>
 <body>
 <iframe src="iframepanel.php?titre=Résultat de la recherche" height="80" width="100%" name="panel"
