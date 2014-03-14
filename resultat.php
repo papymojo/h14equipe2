@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta charset="UTF-8">
     <title>Site d'enchères - Resultat pour <?php echo $_POST['achercher'] ?> </title>
     <?php include('./include/Dependances.html'); ?>
 </head>
@@ -10,7 +9,7 @@
         frameborder="0"></iframe>
 <center>
     <div style="height: 80%; width: 90%; overflow: auto; background-color:white; border-radius: 10px; ">
-    <table class="text-center"
+        <table class="text-center"
         ">
         <tr>
             <?php
