@@ -18,7 +18,7 @@
 <?php
 session_start();
 include("./include/mysqlapi.inc.php");
-echo '<iframe src="iframepanel.php?titre=Accueil" height="80" width="100%" name="panel" frameborder="0"></iframe>';
+echo '<iframe src="iframepanel.php?titre=Enchères et en os" height="80" width="100%" name="panel" frameborder="0"></iframe>';
 ?>
 <div style="width : 80%;   margin-left: auto;  margin-right: auto;">
     <div id="monCaroussel" class="carousel slide" data-ride="carousel">
